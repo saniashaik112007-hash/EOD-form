@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shaivika Groups | EOD Report</title>
+
+<style>
+
+/* ANIMATED PASTEL BACKGROUND */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        120deg,
+        #fff1f5,
+        #eaf5ff,
+        #f2eaff,
+        #eafff4,
+        #fff1e7
+    );
+
+    background-size: 400% 400%;
+
+    animation: backgroundChange 18s ease infinite;
+}
+
+@keyframes backgroundChange {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* SHAPE CONTAINER */
+
+.background-shapes {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+/* ALL SHAPES */
+
+.shape {
+
+    position: absolute;
+
+    opacity: 0.35;
+
+    animation: floating 12s ease-in-out infinite;
+
+}
+
+/* TRIANGLES */
+
+.triangle {
+
+    width: 0;
+    height: 0;
+
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+
+    border-bottom: 60px solid #b9d9ff;
+
+}
+
+.triangle1 {
+
+    top: 15%;
+    left: 8%;
+
+    animation: rotateFloat 15s infinite;
+
+}
+
+.triangle2 {
+
+    bottom: 15%;
+    right: 10%;
+
+    border-bottom-color: #e9caff;
+
+    animation: rotateFloat 18s infinite reverse;
+
+}
+
+/* RECTANGLES */
+
+.rectangle {
+
+    width: 75px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    background: #ffd9c9;
+
+}
+
+.rectangle1 {
+
+    top: 25%;
+    right: 12%;
+
+    transform: rotate(25deg);
+
+    animation: floating 14s infinite;
+
+}
+
+.rectangle2 {
+
+    bottom: 20%;
+    left: 12%;
+
+    background: #c9f0e2;
+
+    animation: floating 17s infinite reverse;
+
+}
+
+/* SQUARES */
+
+.square {
+
+    width: 35px;
+    height: 35px;
+
+    border: 3px solid #c7b6f5;
+
+    border-radius: 8px;
+
+}
+
+.square1 {
+
+    top: 60%;
+    left: 5%;
+
+    animation: rotateFloat 16s infinite;
+
+}
+
+.square2 {
+
+    top: 12%;
+    right: 25%;
+
+    border-color: #f5c5d7;
+
+    animation: rotateFloat 13s infinite reverse;
+
+}
+
+/* CIRCLES */
+
+.circle {
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #d8eaff;
+
+}
+
+.circle1 {
+
+    top: 75%;
+    right: 25%;
+
+    animation: floating 15s infinite;
+
+}
+
+.circle2 {
+
+    top: 35%;
+    left: 20%;
+
+    width: 30px;
+    height: 30px;
+
+    background: #f8d9b9;
+
+    animation: floating 11s infinite reverse;
+
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floating {
+
+    0%, 100% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-35px);
+
+    }
+
+}
+
+/* ROTATION ANIMATION */
+
+@keyframes rotateFloat {
+
+    0% {
+
+        transform: translateY(0px) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-25px) rotate(180deg);
+
+    }
+
+    100% {
+
+        transform: translateY(0px) rotate(360deg);
+
+    }
+
+}
+
+/* KEEP CONTENT ABOVE BACKGROUND */
+
+.page {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* GLOBAL STYLING */
+
+:root {
+    --ink: #263247;
+    --muted: #68758a;
+    --line: #e6eaf1;
+    --accent: #244b9b;
+    --accent-dark: #173777;
+    --card: rgba(255,255,255,.92);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    min-height: 100vh;
+    padding: 34px 18px 28px;
+
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+
+    color: var(--ink);
+
+    background: linear-gradient(
+        120deg,
+        #fff5f7,
+        #f0f7ff,
+        #f8f1ff,
+        #effbf6,
+        #fff4ec
+    );
+
+    background-size: 400% 400%;
+
+    animation: pastelFlow 18s ease infinite;
+
+}
+
+/* ANIMATED BACKGROUND */
+
+@keyframes pastelFlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* MAIN CONTAINER */
+
+.page {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* HEADER SECTION */
+
+.hero {
+
+    text-align: center;
+    margin: 0 auto 26px;
+
+}
+
+/* LOGO */
+
+.logo {
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+    margin: 0 auto 20px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    padding: 0;
+    box-shadow: none;
+}
+
+/* MAIN HEADING */
+
+.hero h1 {
+
+    margin: 0 0 11px;
+
+    font-size: clamp(30px,5vw,43px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.4px;
+
+    font-weight: 800;
+
+}
+
+/* INTRODUCTION */
+
+.hero p {
+
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+}
+
+/* FORM CARD */
+
+.form-card {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: clamp(24px,5vw,42px);
+
+    background: var(--card);
+
+    border: 1px solid rgba(255,255,255,.95);
+
+    border-radius: 25px;
+
+    box-shadow: 0 22px 65px rgba(57,75,111,.11);
+
+    backdrop-filter: blur(14px);
+
+}
+
+/* FORM LABEL */
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border-radius: 30px;
+
+    background: #edf4ff;
+
+    color: #31558e;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+}
+
+.eyebrow-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #6e9cdb;
+
+}
+
+/* FORM HEADING */
+
+.form-title {
+
+    margin: 17px 0 8px;
+
+    font-size: 25px;
+
+    letter-spacing: -.5px;
+
+}
+
+/* FORM DESCRIPTION */
+
+.form-intro {
+
+    margin: 0 0 27px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+/* GRID */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 19px;
+
+}
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.full {
+
+    grid-column: 1 / -1;
+
+}
+
+/* LABELS */
+
+label {
+
+    color: #43516a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+/* INPUT FIELDS */
+
+input,
+textarea {
+
+    width: 100%;
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    padding: 14px 15px;
+
+    background: #fff;
+
+    color: var(--ink);
+
+    font: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color .2s, box-shadow .2s;
+
+}
+
+/* INPUT FOCUS */
+
+input:focus,
+textarea:focus {
+
+    border-color: #86a8dc;
+
+    box-shadow: 0 0 0 4px rgba(91,135,199,.13);
+
+}
+
+input[readonly] {
+
+    background: #f7f9fc;
+
+    color: #718096;
+
+}
+
+textarea {
+
+    min-height: 145px;
+
+    resize: vertical;
+
+}
+
+.hint {
+
+    margin-top: -3px;
+
+    color: #8a95a6;
+
+    font-size: 11px;
+
+}
+
+/* BUTTON SECTION */
+
+.actions {
+
+    margin-top: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+/* SUBMIT BUTTON */
+
+button {
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding: 15px 24px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        110deg,
+        #244b9b,
+        #173777
+    );
+
+    box-shadow: 0 9px 22px rgba(30,65,135,.25);
+
+    transition: transform .2s, box-shadow .2s, opacity .2s;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 26px rgba(30,65,135,.3);
+
+}
+
+button:disabled {
+
+    opacity: .65;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+.note {
+
+    color: #8993a3;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+/* THANK YOU SECTION */
+
+#thankYou {
+
+    display: none;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 48px 28px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.94);
+
+    border: 1px solid #fff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 22px 65px rgba(57,75,111,.11);
+
+}
+
+#thankYou.show {
+
+    display: block;
+
+    animation: appear .45s ease both;
+
+}
+
+/* THANK YOU ANIMATION */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* SUCCESS ICON */
+
+.thank-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: 0 auto 17px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #e6f8ef,
+        #e8f2ff
+    );
+
+    font-size: 32px;
+
+}
+
+/* THANK YOU HEADING */
+
+#thankYou h2 {
+
+    margin: 0 0 12px;
+
+    font-size: clamp(25px,4vw,34px);
+
+}
+
+/* THANK YOU MESSAGE */
+
+#thankYou p {
+
+    margin: 0 auto;
+
+    max-width: 560px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #8792a3;
+
+    font-size: 11px;
+
+    letter-spacing: .8px;
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 25px 12px;
+
+    }
+
+    .grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .full {
+
+        grid-column: auto;
+
+    }
+
+    .logo {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+    .hero p {
+
+        font-size: 14px;
+
+    }
+
+    .form-card {
+
+        border-radius: 20px;
+
+    }
+
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .page {
+        width: 95%;
+    }
+
+    .form-card {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+}
+
+/* MOBILE DEVICES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .page {
+        width: 100%;
+    }
+
+    .hero {
+        margin-bottom: 22px;
+        padding: 0 8px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .form-card {
+        padding: 23px 17px;
+        border-radius: 19px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .note {
+        text-align: center;
+    }
+
+    .triangle {
+        transform: scale(.65);
+    }
+
+    .rectangle {
+        transform: scale(.7);
+    }
+
+}
+
+/* SMALL MOBILE DEVICES */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .form-card {
+        padding: 19px 13px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+/* REDUCE MOTION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =====================================
+   SHAIVIKA GROUPS
+   PREMIUM ANIMATED BACKGROUND
+===================================== */
+
+
+/* MAIN BACKGROUND */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        120deg,
+        #FFE8EF,
+        #DCEEFF,
+        #EDE1FF,
+        #DDF7EB,
+        #FFE8D8,
+        #FFF0D9
+    );
+
+    background-size: 400% 400%;
+
+    animation: backgroundChange 18s ease infinite;
+}
+
+
+/* AUTOMATIC BACKGROUND COLOUR CHANGE */
+
+@keyframes backgroundChange {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =====================================
+   BACKGROUND SHAPE CONTAINER
+===================================== */
+
+.background-shapes {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+/* ALL SHAPES */
+
+.shape {
+
+    position: absolute;
+
+    opacity: 0.60;
+
+    filter: drop-shadow(
+        0 5px 10px rgba(100,120,160,0.10)
+    );
+
+    animation: floating 12s ease-in-out infinite;
+
+}
+
+
+/* =====================================
+   TRIANGLES
+===================================== */
+
+.triangle {
+
+    width: 0;
+    height: 0;
+
+    border-left: 35px solid transparent;
+
+    border-right: 35px solid transparent;
+
+    border-bottom: 60px solid #91BFFF;
+
+}
+
+
+/* TRIANGLE 1 */
+
+.triangle1 {
+
+    top: 15%;
+
+    left: 8%;
+
+    animation: rotateFloat 15s ease-in-out infinite;
+
+}
+
+
+/* TRIANGLE 2 */
+
+.triangle2 {
+
+    bottom: 15%;
+
+    right: 10%;
+
+    border-bottom-color: #D5A9F5;
+
+    animation: rotateFloat 18s infinite reverse;
+
+}
+
+
+/* =====================================
+   RECTANGLES
+===================================== */
+
+.rectangle {
+
+    width: 75px;
+
+    height: 45px;
+
+    border-radius: 10px;
+
+    background: #FFBFA6;
+
+}
+
+
+/* RECTANGLE 1 */
+
+.rectangle1 {
+
+    top: 25%;
+
+    right: 12%;
+
+    animation: floating 14s infinite;
+
+}
+
+
+/* RECTANGLE 2 */
+
+.rectangle2 {
+
+    bottom: 20%;
+
+    left: 12%;
+
+    background: #8EDCC5;
+
+    animation: floating 17s infinite reverse;
+
+}
+
+
+/* =====================================
+   SQUARES
+===================================== */
+
+.square {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 3px solid #B49AEF;
+
+    border-radius: 8px;
+
+}
+
+
+/* SQUARE 1 */
+
+.square1 {
+
+    top: 60%;
+
+    left: 5%;
+
+    animation: rotateFloat 16s infinite;
+
+}
+
+
+/* SQUARE 2 */
+
+.square2 {
+
+    top: 12%;
+
+    right: 25%;
+
+    border-color: #F2A6C5;
+
+    animation: rotateFloat 13s infinite reverse;
+
+}
+
+
+/* =====================================
+   CIRCLES
+===================================== */
+
+.circle {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #A9D4FF;
+
+}
+
+
+/* CIRCLE 1 */
+
+.circle1 {
+
+    top: 75%;
+
+    right: 25%;
+
+    animation: floating 15s infinite;
+
+}
+
+
+/* CIRCLE 2 */
+
+.circle2 {
+
+    top: 35%;
+
+    left: 20%;
+
+    width: 30px;
+
+    height: 30px;
+
+    background: #FFC58F;
+
+    animation: floating 11s infinite reverse;
+
+}
+
+
+/* =====================================
+   FLOATING ANIMATION
+===================================== */
+
+@keyframes floating {
+
+    0%, 100% {
+
+        transform: translateY(0px) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-35px) rotate(12deg);
+
+    }
+
+}
+
+
+/* =====================================
+   ROTATION ANIMATION
+===================================== */
+
+@keyframes rotateFloat {
+
+    0% {
+
+        transform: translateY(0px) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-25px) rotate(180deg);
+
+    }
+
+    100% {
+
+        transform: translateY(0px) rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================
+   KEEP FORM ABOVE BACKGROUND
+===================================== */
+
+.page {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================
+   FORM CARD
+===================================== */
+
+.form-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    background: rgba(255,255,255,0.94);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.95);
+
+    box-shadow: 0 22px 65px rgba(57,75,111,0.12);
+
+}
+
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+button {
+
+    background: linear-gradient(
+        110deg,
+        #244B9B,
+        #173777
+    );
+
+    color: white;
+
+    box-shadow: 0 9px 22px rgba(30,65,135,0.25);
+
+    transition: all 0.3s ease;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 13px 28px rgba(30,65,135,0.32);
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .page {
+
+        width: 95%;
+
+    }
+
+    .form-card {
+
+        width: 100%;
+
+    }
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 12px;
+
+    }
+
+    .page {
+
+        width: 100%;
+
+    }
+
+    .hero {
+
+        margin-bottom: 22px;
+
+        padding: 0 8px;
+
+    }
+
+    .logo {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 29px;
+
+    }
+
+    .hero p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+    .form-card {
+
+        padding: 23px 17px;
+
+        border-radius: 19px;
+
+    }
+
+    .grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+    }
+
+    .full {
+
+        grid-column: auto;
+
+    }
+
+    input,
+    textarea {
+
+        font-size: 16px;
+
+        padding: 14px;
+
+    }
+
+    .actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    button {
+
+        width: 100%;
+
+        padding: 16px;
+
+    }
+
+    .note {
+
+        text-align: center;
+
+    }
+
+    .triangle {
+
+        transform: scale(.75);
+
+    }
+
+    .rectangle {
+
+        transform: scale(.8);
+
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE DEVICES
+===================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+
+        font-size: 25px;
+
+    }
+
+    .form-card {
+
+        padding: 19px 13px;
+
+    }
+
+    .logo {
+
+        width: 130px;
+
+        height: 130px;
+
+    }
+
+}
+
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ANIMATED BACKGROUND SHAPES -->
+
+<div class="background-shapes">
+
+    <span class="shape triangle triangle1"></span>
+
+    <span class="shape triangle triangle2"></span>
+
+    <span class="shape rectangle rectangle1"></span>
+
+    <span class="shape rectangle rectangle2"></span>
+
+    <span class="shape square square1"></span>
+
+    <span class="shape square square2"></span>
+
+    <span class="shape circle circle1"></span>
+
+    <span class="shape circle circle2"></span>
+
+</div>
+
+<main class="page">
+
+    <!-- HEADER -->
+
+    <header class="hero">
+
+        <img
+            class="logo"
+            src="logo.png"
+            alt="Shaivika Groups Logo"
+        >
+
+        <h1>Shaivika Groups</h1>
+
+        <p>
+
+            Every meaningful day moves an idea forward.
+
+            Share your progress, reflect on what you have
+            accomplished, and let the team stay connected
+            with the work shaping what comes next.
+
+        </p>
+
+    </header>
+
+
+    <!-- EOD FORM -->
+
+    <section class="form-card" id="formCard">
+
+        <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            End of day · Team update
+
+        </div>
+
+
+        <h2 class="form-title">
+
+            Shaivika Groups EOD Report
+
+        </h2>
+
+
+        <p class="form-intro">
+
+            Take a moment to record your daily contribution,
+            key milestones, challenges, and next steps.
+            Your update helps the team move forward together.
+
+        </p>
+
+
+        <form id="eodForm">
+
+            <div class="grid">
+
+
+                <!-- FULL NAME -->
+
+                <div class="field">
+
+                    <label for="fullName">
+
+                        Full Name *
+
+                    </label>
+
+                    <input
+                        id="fullName"
+                        name="fullName"
+                        type="text"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="field">
+
+                    <label for="phone">
+
+                        Phone Number *
+
+                    </label>
+
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+91 98765 43210"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="field">
+
+                    <label for="email">
+
+                        Email Address *
+
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="name@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="field">
+
+                    <label for="location">
+
+                        Location *
+
+                    </label>
+
+                    <input
+                        id="location"
+                        name="location"
+                        type="text"
+                        placeholder="City / Work Location"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DATE AND TIME -->
+
+                <div class="field full">
+
+                    <label for="submittedAt">
+
+                        Date & Time
+
+                    </label>
+
+                    <input
+                        id="submittedAt"
+                        name="submittedAt"
+                        type="datetime-local"
+                        required
+                    >
+
+                    <span class="hint">
+
+                        Automatically filled using your device's
+                        local date and time.
+
+                    </span>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="field full">
+
+                    <label for="message">
+
+                        EOD Message / Work Summary *
+
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="What did you work on today? Mention completed tasks, progress, challenges, and your next steps..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- SUBMIT BUTTON -->
+
+            <div class="actions">
+
+                <button id="submitBtn" type="submit">
+
+                    Submit EOD Report →
+
+                </button>
+
+                <span class="note">
+
+                    Thank you for keeping the team updated.
+
+                </span>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- THANK YOU SCREEN -->
+
+    <section
+        id="thankYou"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="thank-icon">
+
+            🎉
+
+        </div>
+
+
+        <h2>
+
+            Thank You for Filling Out the Form!
+
+        </h2>
+
+
+        <p>
+
+            💙 Your daily update means a lot to us.
+
+            Thank you for your time, effort, and contribution
+            to Shaivika groups.
+
+            Keep learning, keep building, and keep moving forward!
+
+            ✨
+
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        SHAIVIKA GROUPS · INNOVATE. EXPLORE. EVOLVE.
+
+    </footer>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// =====================================
+// GOOGLE APPS SCRIPT BACKEND URL
+// =====================================
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUf6tA-NN6_SLuPKmzlqrsbOUg8ZwVGOhstVWgSPxb4nJxat5sPdc371xia0gUZVQtlQ/exec";
+
+
+// =====================================
+// HTML ELEMENTS
+// =====================================
+
+const form = document.getElementById("eodForm");
+
+const formCard = document.getElementById("formCard");
+
+const thankYou = document.getElementById("thankYou");
+
+const submitBtn = document.getElementById("submitBtn");
+
+const dateField = document.getElementById("submittedAt");
+
+
+// =====================================
+// AUTOMATIC DATE AND TIME
+// =====================================
+
+function setLocalDateTime() {
+
+    const now = new Date();
+
+    const local = new Date(
+        now.getTime() -
+        now.getTimezoneOffset() * 60000
+    );
+
+    dateField.value = local.toISOString().slice(0, 16);
+
+}
+
+setLocalDateTime();
+
+
+// =====================================
+// FORM SUBMISSION
+// =====================================
+
+form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    // Validate all required fields
+
+    if (!form.reportValidity()) {
+        return;
+    }
+
+    // Disable button
+
+    submitBtn.disabled = true;
+
+    submitBtn.textContent = "Submitting...";
+
+    // Collect form data
+
+    const formData = new FormData(form);
+
+    const data = new URLSearchParams();
+
+    for (const [key, value] of formData.entries()) {
+
+        data.append(key, value);
+
+    }
+
+    try {
+
+        // Send data to Google Sheets
+
+        await fetch(SCRIPT_URL, {
+
+            method: "POST",
+
+            mode: "no-cors",
+
+            body: data
+
+        });
+
+
+        // Hide the form
+
+        formCard.style.display = "none";
+
+
+        // Display thank-you screen
+
+        thankYou.classList.add("show");
+
+
+        // Scroll to thank-you section
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+    catch(error) {
+
+        console.error("Submission error:", error);
+
+        alert(
+            "Something went wrong. Please check your internet connection and try again."
+        );
+
+        submitBtn.disabled = false;
+
+        submitBtn.textContent = "Submit EOD Report →";
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
