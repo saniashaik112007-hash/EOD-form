@@ -1535,6 +1535,32 @@ button:hover {
 
 }
 
+/* Give the supplied logo a clear, polished frame without altering its artwork. */
+.logo {
+    width: 228px;
+    height: 180px;
+    padding: 9px;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid rgba(36, 75, 155, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(36, 75, 155, 0.14);
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 204px;
+        height: 164px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        width: 184px;
+        height: 148px;
+    }
+}
+
 </style>
 
 </head>
@@ -1575,7 +1601,7 @@ button:hover {
             alt="Shaivika Groups Logo"
         >
 
-        <h1>Shaivika Groups</h1>
+        <h1>Shaivika Members</h1>
 
         <p>
 
